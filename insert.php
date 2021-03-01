@@ -18,6 +18,13 @@ echo "<table border='1'>
 <th>Last name</th>
 <th>Age</th>
 </tr>";
-while($com=mysql_fetch_array($result))
+while($row=mysql_fetch_array($result))
 {
-echo"<tr
+echo"<tr>"
+echo "<td>".$row['Fname'],"</td>";
+echo "<td>".$row['Lastname'],"</td>";
+echo "<td>".$row['Age'],"</td>";
+echo "</tr>";
+}
+echo "<table>";
+mysql_close($con);
